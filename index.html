@@ -1,9 +1,16 @@
-<body onload="showAlert()">
+<body>
+    <h1>Kalkulačka Chudosti Michala</h1>
+    <button onclick="showAlert()">Spustit</button>
     <script>
         function showAlert() {
             let MichalPrompt = prompt('Zadej Počet Korun');
             if (MichalPrompt != null) {
-                alert('Michal bohužel tento počet korun (' + MichalPrompt + ') nemá!');
+                if (MichalPrompt < 0) {
+                    alert('Michal dluží ' + MichalPrompt)
+
+                } else {
+                    alert('Michal bohužel tento počet korun (' + MichalPrompt + ') nemá!');
+                }
             }
         }
     </script>
